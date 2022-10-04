@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fainá - A freeCodeCamp challenge solution by @amparoamparo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/c82c7dc405.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white">
+    <header id="header" class="grid general-padding center-text bg-chickpea-yellow">
+        <a href="#"><img src="images/logo.png" alt="Fainá's logo" id="header-img"></a>
+        <nav id="nav-bar" class="flex general-padding">
+            <a href="#about" class="nav-link">What's fainá?</a>
+            <a href="#ingredients" class="nav-link">Ingredients</a>
+            <a href="#blog" class="nav-link">Blog</a>
+            <a href="#newsletter" class="nav-link">Free fainá recipe</a>
+        </nav>
+    </header>
+    <main id="content">
+        <section id="about" class="general-padding grid">
+            <div class="about-grid grid">
+                <h1>Pizza's other half</h1>
+                <img src="images/two-slices-of-faina.png" alt="A photo of two slices of fainá.">
+                <figcaption>Fainá is an Argentine cult dish made with chickpea flour that is traditionally served with pizza. On top of every slice, to be precise.</figcaption>
+                <img src="images/faina-being-made-in-a-pizzeria.png" alt="A photo of the inside of a pizzeria in Buenos Aires.">
+                <figcaption>You haven’t really been to Buenos Aires if you haven’t enjoyed a slice of fainá with your Argentine pizza.</figcaption>
+            </div>
+        </section>
+        <section id="ingredients" class="general-padding">
+            <h1>The star of the show: THE CHICKPEA</h1>
+            <img src="images/chickpeas.jpg" alt="">
+            <h2>Accidentally vegan, fainá is made with only a few ingredients:</h2>
+            <ul class="ingredients-list">
+                <li>Chickpea flour</li>
+                <li>Olive oil</li>
+                <li>Water</li>
+                <li>Salt and pepper</li>
+            </ul>
+            <h3>But you can make it extra special by adding:</h3>
+            <ul class="ingredients-list">
+                <li>Onion</li>
+                <li>Herbs (like rosemary or oregano)</li>
+                <li>and other food things</li>
+            </ul>
+        </section>
+        <section id="video" class="general-padding">
+            <figcaption>Originally introduced to the region by Italian immigrants, this River Plate* favourite is very easy to make. Want to try making your own? Watch this video:</figcaption>
+            <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/b2I1dWexOxg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <sub>*The region, not the <a href="https://en.wikipedia.org/wiki/Club_Atl%C3%A9tico_River_Plate">Football club</a>!</sub>
+        </section>
+        <section id="blog" class="grid general-padding">
+            <article class="blog-post flex general-padding">
+                <img src="images/blog-post-1.png" alt="A photo of Buenos Aires, Argentina.">
+                <h3>Best pizzerias in Buenos Aires</h3>
+                <p>Planning a trip to Buenos Aires? You'll regret not paying these a visit!</p>
+                <a href="#" class="button general-padding">Read the post</a>
+            </article>
+            <article class="blog-post flex general-padding">
+                <img src="images/blog-post-2.png" alt="An image with random letters.">
+                <h3>Different names for the same thing</h3>
+                <p>Farinata, socca, torta di ceci, cecina... those are just some of the names given to this garbanzo delicacy.</p>
+                <a href="#" class="button general-padding">Read the post</a>
+            </article>
+            <article class="blog-post flex general-padding">
+                <img src="images/blog-post-3.png" alt="An old photo of immigrants arriving in Argentina.">
+                <h3>Fainá’s journey to the River Plate</h3>
+                <p>Many thousands of Ligurian people emigrated to Argentina and Uruguay between the 19th and 20th centuries.</p>
+                <a href="#" class="button general-padding">Read the post</a>
+            </article>
+        </section>
+        <section id="newsletter" class="bg-sky-blue general-padding">
+            <form action="https://www.freecodecamp.com/email-submit" method="post" id="form" class="grid center-text">
+                <h1 class="yellow">Free fainá recipe</h1>
+                <p class="yellow">Sign up for our newsletter and get a <strong>free PDF recipe</strong> to make your very own, authentic fainá at home.</p>
+                <p>You’ll also get cool chickpea facts every week!</p>
+                <input type="email" id="email" name="email" placeholder="Enter your email here" required class="yellow">
+                <input type="submit" id="submit" value="Subscribe" class="bg-chickpea-yellow">
+                <small class="yellow">You can unsubscribe anytime.</small>
+            </form>
+        </section>
+        <footer class="grid bg-chickpea-yellow center-text">
+                <small>All photos used for educational purposes only.</small>
+                <p><a href="https://www.freecodecamp.org">freeCodeCamp</a> challenge solution by <a href="https://www.freecodecamp.org/amparo"><i class="fa-solid fa-skull"></i> Amparo</a>.</p>
+                <div id="social" class="flex">
+                    <a href="https://github.com/amparoamparo"><i class="fa-brands fa-github fa-2x"></i></a>
+                    <a href="https://twitter.com/frontendamparo"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/amparozeballos/"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
+                    <a href="mailto:amparozeballos@gmail.com"><i class="fa-solid fa-at fa-2x"></i></a>
+                </div>
+        </footer>
+    </main>
+</body>
+</html>
