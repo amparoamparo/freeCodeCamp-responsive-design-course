@@ -1,6 +1,8 @@
 
 # freeCodeCamp-product-landing-page
 
+:construction: **WORK IN PROGRESS** :construction:
+
 This is my take on the "Build a Product Landing Page" project from [freeCodeCamp](http://freecodecamp.org)'s [Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/) course.
 
 ## Objective
