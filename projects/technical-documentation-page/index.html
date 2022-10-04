@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Apps Script - Built-in Google Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c82c7dc405.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Public+Sans:wght@400;500;600;700;800;900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <nav id="navbar">
+                <header class="nav-header">
+                <a href="#"><img class="logo" src="https://www.gstatic.com/images/branding/product/2x/apps_script_48dp.png" alt="" class="logo"></a>
+                <h1>Google Apps Script</h1>
+                <h2>Built-in Google Services</h2>
+                </header>
+                <ul class="nav-links">
+                    <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Modern_JavaScript_features">Modern JavaScript features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Using_autocomplete">Using autocomplete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Understanding_global_objects">Understanding global objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Calling_methods">Calling methods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Accessing_child_classes">Accessing child classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Dealing_with_interfaces">Dealing with interfaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Working_with_enums">Working with enums</a></li>
+                </ul>
+            </nav>
+        </aside>       
+        <main id="main-doc">
+            <article>
+                <section tabindex="-1" class="main-section" id="Introduction">
+                    <header>
+                    <h3>Introduction</h3>
+                    </header>
+                    <p>Google Apps Script provides more than 30 built-in services for interacting with user data, other Google systems, and external systems. These services are provided as global objects akin to JavaScript's standard Math object. For example, just as Math offers methods like random() and constants like PI, Apps Script's Spreadsheet service offers methods like openById(id), classes (child objects) like Range, and enums like DataValidationCriteria.</p>
+                    <p>The reference documentation for services that control Google Workspace products are collected in the "Google Workspace Services" section under the "Reference" header in the sidebar of this site. Utility services (for things like creating user interfaces, parsing XML, or writing log data) are collected in the "Script Services" section.</p>
+                </section>
+                <section tabindex="-1" class="main-section" id="Modern_JavaScript_features">
+                    <header>
+                    <h3>Modern JavaScript features</h3>
+                    </header>
+                    <p>Apps Script supports two JavaScript runtimes: the modern V8 runtime and an older one powered by Mozilla's Rhino JavaScript interpreter.</p>
+                    <p>The V8 runtime supports modern ECMAScript syntax and features. The Rhino runtime is based on the older JavaScript 1.6 standard, plus a few features from 1.7 and 1.8. You can freely choose which runtime to use with your script, but the V8 runtime is strongly recommended.</p>
+                    <p>Each runtime supports JavaScript classes and objects that are available to your script in addition to the built-in and advanced Google services. Your scripts can use common objects like Array, Date, RegExp, and so forth, as well as the Math and Object global objects.</p>
+                    <div class="note">
+                        <i class="fa-regular fa-note-sticky fa-2x"></i><span class="spacer"></span><p>Because Apps Script code runs on Google's servers (with the exception of HTML-service pages), browser-based JavaScript features like DOM manipulation or the Window API are not available in Apps Script.</p>
+                    </div>
+                    
+                </section>
+                <section tabindex="-1" class="main-section" id="Using_autocomplete">
+                    <header>
+                    <h3>Using autocomplete</h3>
+                    </header>
+                    <p>The script editor provides a "content assist" feature, more commonly called "autocomplete," which reveals the global objects as well as methods and enums that are valid in the script's current context. Autocomplete suggestions appear automatically whenever you type a period after a global object, enum, or method call that returns an Apps Script class.</p>
+                    <p>For example:</p>
+                    <ul>
+                    <li>If you type the full name of a global object or select one from autocomplete, then type . (a period), you will see all methods and enums for that class.</li>
+                    <li>If you type a few characters, you'll see all valid suggestions that begin with those characters.</li>
+                    </ul>
+                </section>
+                <section tabindex="-1" class="main-section" id="Understanding_global_objects">
+                    <header>
+                    <h3>Understanding global objects</h3>
+                    </header>
+                    <p>Each service provides at least one global (top-level) object; for example, the Gmail service is accessed solely from the GmailApp object. Some services provide multiple global objects.</p>
+                    <p>For example, the Base service includes four global objects:</p>
+                    <ul>
+                    <li>Browser,</li>
+                    <li>Logger,</li>
+                    <li>MimeType, and</li>
+                    <li>Session.</li>
+                    </ul>
+                </section>
+                <section tabindex="-1" class="main-section" id="Calling_methods">
+                    <header>
+                    <h3>Calling methods</h3>
+                    </header>
+                    <p>The global objects of nearly all built-in or advanced services include methods that return data or an Apps Script class. Scripts make method calls in this format:</p>
+                    <div class="codeblock">
+                        <code>
+                            GlobalObjectName.methodName(argument1, argument2, ..., argumentN);
+                        </code>
+                    </div>                    
+                    <p class="below-code">For example, a script can send an email by calling the sendEmail(recipient, subject, body) method of the Gmail service like so:</p>
+                    <div class="codeblock">
+                        <code>
+                            GmailApp.sendEmail('claire@example.com', 'Subject line', 'This is the body.');
+                        </code>
+                    </div>                
+                    <p class="below-code">If a method returns another Apps Script class, you can chain method calls on one line. (Return types are shown both in autocomplete and in a method's reference documentation.) For example, the method DocumentApp.create() returns a Document; thus, the following two sections of code are equivalent:</p>
+                    <div class="codeblock">
+                        <code>
+                            var doc = DocumentApp.create('New document');<br>
+                            var body = doc.getBody();<br>
+                            body.appendParagraph('New paragraph.');<br><br>
+                            // Same result as above.<br>
+                            DocumentApp.create('New document').getBody().appendParagraph('New paragraph.');
+                        </code>
+                    </div>
+                </section>
+                <section tabindex="-1" class="main-section" id="Accessing_child_classes">
+                    <header>
+                    <h3>Accessing child classes</h3>
+                    </header>
+                    <p>Every service includes one or more child classes that cannot be accessed from the top level as a global object can. You cannot use the new keyword to construct these classes, as you can with standard JavaScript classes like Date; you can only access a child class by calling a method that returns it. If you're not sure how to access a certain class, visit the root page for the service's reference documentation and look for a method that returns the class you want.</p>
+                </section>
+                <section tabindex="-1" class="main-section" id="Dealing_with_interfaces">
+                    <header>
+                    <h3>Dealing with interfaces</h3>
+                    </header>
+                    <p>A handful of services include special classes that are labeled as "interfaces" in the reference documentation. These are generic classes used as return types for methods that cannot determine the precise type in advance; for example, the Document service method Body.getChild(childIndex) returns a generic Element object. Element is an interface that represents some other class, possibly a Paragraph or Table. Interface objects are rarely useful on their own; instead, you usually want to call a method like Element.asParagraph() to cast the object back to a precise class.</p>
+                </section>
+                <section tabindex="-1" class="main-section" id="Working_with_enums">
+                    <header>
+                    <h3>Working with enums</h3>
+                    </header>
+                    <p>Most services include a few enums (enumerated types) of named values. For example, the Drive service uses the enums Access and Permission to determine which users have access to a file or folder. In almost all cases, you access these enums from the global object. For example, a call to the method Folder.setSharing(accessType, permissionType) looks like this:</p>
+                    <div class="codeblock">
+                        <code>
+                            // Creates a folder that anyone on the Internet can read from and write to. (Domain administrators can<br>
+                            // prohibit this setting for Google Workspace users.)
+                            <br><br>
+                            var folder = DriveApp.createFolder('Shared Folder');
+                            folder.setSharing(DriveApp.Access.ANYONE, DriveApp.Permission.EDIT);
+                        </code>
+                    </div>
+                    <p class="below-code">Let's look at that again:</p>
+                    <div class="codeblock">
+                        <code>
+                            // Creates a folder that anyone on the Internet can read from and write to. (Domain administrators can<br>
+                            // prohibit this setting for Google Workspace users.)
+                            <br><br>
+                            var folder = DriveApp.createFolder('Shared Folder');
+                            folder.setSharing(DriveApp.Access.ANYONE, DriveApp.Permission.EDIT);
+                        </code>
+                    </div>
+                </section>
+                <footer>
+                    All the documentation in this page is taken from <a href="https://developers.google.com/apps-script/guides/services" alt="Built-in Google Services  |  Apps Script  |  Google Developers">Built-in Google Services (Google Apps Script)</a>.
+                </footer>
+                <div class="back-to-top">
+                    <a href="#">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                            <i class="fas fa-circle-arrow-up fa-stack-2x"></i>
+                        </span>
+                    </a>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

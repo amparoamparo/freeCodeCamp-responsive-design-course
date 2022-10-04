@@ -1,0 +1,281 @@
+/*CSS RESET STARTS HERE*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*CSS RESET ENDS HERE*/
+
+/*CUSTOM CSS STARTS HERE*/
+
+body {
+    font-family: 'Public Sans', 'Open Sans', sans-serif;
+    /* display: grid;
+        grid-template-columns: auto 0px; */
+}
+
+.nav-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    color: #4385f4;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #4385f4;
+}
+
+.nav-header {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 60px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.nav-item > a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-item > a:hover,
+.nav-item > a:focus {
+    color: #4385f4;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-item > a:active {
+    color: #4385f4;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+ul {
+    margin-bottom: -10px;
+}
+
+code {
+    font-family: consolas;
+    font-size: 14px;
+    text-align: left;
+    word-wrap: break-word;
+    page-break-inside: avoid;
+    display: block;
+    border-left: 6px solid #4385f4;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 2px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.below-code {
+    margin-top: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px auto;
+    background-color: white;
+}
+
+header {
+    padding-top: 40px;
+}
+
+#navbar {
+    background-color: #fff;
+    box-shadow: -30px 0 40px 0;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    position: fixed;
+    height: 100vh;
+    width: fit-content;
+}
+
+#main-doc {
+    grid-column-start: 2;
+    padding: 0 40px 0 80px;
+    max-width: 100ch;
+}
+
+.note {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    background-color: #e1f5fe;
+    color: #01579b;
+    padding: 20px 20px 20px 20px;
+    border-radius: 2px;
+    margin-top: 20px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+}
+
+.note > p {
+    padding: 0;
+    margin: 0;
+}
+
+.spacer {
+    width: 20px;
+}
+
+footer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.back-to-top > a {
+    display: none;
+  }
+
+@media (max-width: 916px) {
+       
+    .container {
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navbar {
+        position: initial;
+        height: fit-content;
+        min-width: 100%;
+        box-shadow: 0px -30px 40px 1px;
+    }
+
+    .nav-header {
+        min-width: 24ch;
+    }
+
+    #main-doc {
+        position: initial;
+        padding: 40px;
+        padding-top: 0;
+    }
+
+    .back-to-top > a {
+        display: initial;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        text-decoration: none;
+        color: #4385f4;
+        font-size: 1.4rem;
+    }
+    
+    .back-to-top > a:hover {
+        color: #34a853;
+    }
+    
+    .back-to-top > a:active {
+        color: #fbbc05;
+    }
+}
+
+/*CUSTOM CSS ENDS HERE*/
