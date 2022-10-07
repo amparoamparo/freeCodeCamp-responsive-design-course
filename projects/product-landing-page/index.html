@@ -13,15 +13,16 @@
     <script src="https://kit.fontawesome.com/c82c7dc405.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-white">
+    <div class="bg-chickpea-yellow">
     <header id="header" class="grid general-padding center-text bg-chickpea-yellow">
         <a href="#"><img src="images/logo.png" alt="Fainá's logo" id="header-img"></a>
-        <nav id="nav-bar" class="flex general-padding">
+        <nav id="nav-bar" class="flex">
             <a href="#about" class="nav-link">What's fainá?</a>
-            <a href="#ingredients" class="nav-link">Ingredients</a>
             <a href="#blog" class="nav-link">Blog</a>
             <a href="#newsletter" class="nav-link">Free fainá recipe</a>
         </nav>
     </header>
+    </div>
     <main id="content">
         <section id="about" class="general-padding grid">
             <div class="about-grid grid">
@@ -32,58 +33,45 @@
                 <figcaption>You haven’t really been to Buenos Aires if you haven’t enjoyed a slice of fainá with your Argentine pizza.</figcaption>
             </div>
         </section>
-        <section id="ingredients" class="general-padding">
-            <h1>The star of the show: THE CHICKPEA</h1>
-            <img src="images/chickpeas.jpg" alt="">
-            <h2>Accidentally vegan, fainá is made with only a few ingredients:</h2>
-            <ul class="ingredients-list">
-                <li>Chickpea flour</li>
-                <li>Olive oil</li>
-                <li>Water</li>
-                <li>Salt and pepper</li>
-            </ul>
-            <h3>But you can make it extra special by adding:</h3>
-            <ul class="ingredients-list">
-                <li>Onion</li>
-                <li>Herbs (like rosemary or oregano)</li>
-                <li>and other food things</li>
-            </ul>
-        </section>
-        <section id="video" class="general-padding">
-            <figcaption>Originally introduced to the region by Italian immigrants, this River Plate* favourite is very easy to make. Want to try making your own? Watch this video:</figcaption>
-            <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/b2I1dWexOxg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <sub>*The region, not the <a href="https://en.wikipedia.org/wiki/Club_Atl%C3%A9tico_River_Plate">Football club</a>!</sub>
-        </section>
-        <section id="blog" class="grid general-padding">
-            <article class="blog-post flex general-padding">
+        <div class="bg-chickpea-yellow">
+            <section id="video-embed" class="general-padding bg-chickpea-yellow grid center-text">
+                <figcaption>Originally introduced to the region by Italian immigrants, this River Plate* favourite is very easy to make!<br><br>Want to try making your own?<br>Watch this video:</figcaption>
+                <iframe id="video" class="video-embed" src="https://www.youtube-nocookie.com/embed/b2I1dWexOxg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <small>*The region, not the <a href="https://en.wikipedia.org/wiki/Club_Atl%C3%A9tico_River_Plate">Football club</a>!</small>
+            </section>
+        </div>
+        <section id="blog" class="grid">
+            <article class="blog-post flex">
                 <img src="images/blog-post-1.png" alt="A photo of Buenos Aires, Argentina.">
                 <h3>Best pizzerias in Buenos Aires</h3>
                 <p>Planning a trip to Buenos Aires? You'll regret not paying these a visit!</p>
-                <a href="#" class="button general-padding">Read the post</a>
+                <a href="#" class="button">Read the post</a>
             </article>
-            <article class="blog-post flex general-padding">
+            <article class="blog-post flex">
                 <img src="images/blog-post-2.png" alt="An image with random letters.">
                 <h3>Different names for the same thing</h3>
                 <p>Farinata, socca, torta di ceci, cecina... those are just some of the names given to this garbanzo delicacy.</p>
-                <a href="#" class="button general-padding">Read the post</a>
+                <a href="#" class="button">Read the post</a>
             </article>
-            <article class="blog-post flex general-padding">
+            <article class="blog-post flex">
                 <img src="images/blog-post-3.png" alt="An old photo of immigrants arriving in Argentina.">
                 <h3>Fainá’s journey to the River Plate</h3>
                 <p>Many thousands of Ligurian people emigrated to Argentina and Uruguay between the 19th and 20th centuries.</p>
-                <a href="#" class="button general-padding">Read the post</a>
+                <a href="#" class="button">Read the post</a>
             </article>
         </section>
-        <section id="newsletter" class="bg-sky-blue general-padding">
-            <form action="https://www.freecodecamp.com/email-submit" method="post" id="form" class="grid center-text">
-                <h1 class="yellow">Free fainá recipe</h1>
-                <p class="yellow">Sign up for our newsletter and get a <strong>free PDF recipe</strong> to make your very own, authentic fainá at home.</p>
-                <p>You’ll also get cool chickpea facts every week!</p>
-                <input type="email" id="email" name="email" placeholder="Enter your email here" required class="yellow">
-                <input type="submit" id="submit" value="Subscribe" class="bg-chickpea-yellow">
-                <small class="yellow">You can unsubscribe anytime.</small>
-            </form>
-        </section>
+        <div class="bg-sky-blue">
+            <section id="newsletter" class="bg-sky-blue general-padding">
+                    <form action="https://www.freecodecamp.com/email-submit" method="post" id="form" class="grid center-text">
+                        <h1 class="yellow">Free fainá recipe</h1>
+                        <p class="yellow">Sign up for our newsletter and get a <strong>free PDF recipe</strong> to make your very own, authentic fainá at home.</p>
+                        <p>You’ll also get cool chickpea facts every week!</p>
+                            <input type="email" id="email" name="email" placeholder="Enter your email here" required class="yellow">
+                            <input type="submit" id="submit" value="Subscribe" class="bg-chickpea-yellow">
+                        <small class="yellow">You can unsubscribe anytime.</small>
+                    </form>
+            </section>
+        </div>
         <footer class="grid bg-chickpea-yellow center-text">
                 <small>All photos used for educational purposes only.</small>
                 <p><a href="https://www.freecodecamp.org">freeCodeCamp</a> challenge solution by <a href="https://www.freecodecamp.org/amparo"><i class="fa-solid fa-skull"></i> Amparo</a>.</p>
