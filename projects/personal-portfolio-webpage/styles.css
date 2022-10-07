@@ -1,0 +1,198 @@
+/*CSS RESET STARTS HERE*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*CSS RESET ENDS HERE*/
+
+/*CUSTOM CSS STARTS HERE*/
+
+.grid {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.general-padding {
+    padding: 3rem;
+}
+
+body {
+    background-color: black;
+    color: greenyellow;
+    overflow-x: hidden;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: underline dashed 3px;
+    font-family: 'Silkscreen', cursive;
+    font-weight: 400;
+}
+
+#navbar {
+    background-color: black;
+    justify-content: center;
+    gap: 4rem;
+    position: fixed;
+    width: 100vw;
+}
+
+#welcome-section {
+    background-color: white;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    padding-top: 28rem;
+    padding-bottom: 20rem;
+}
+
+#welcome-section p {
+    font-family: 'Poppins', sans-serif;
+}
+
+#projects {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+.project-tile {
+    flex-direction: column;
+    justify-content: space-around;
+    border: 0.16rem greenyellow dashed;
+    text-align: center;
+    border-radius: 1rem;
+    aspect-ratio: 1;
+    width: 16rem;
+    height: 16rem;
+    cursor: pointer;
+    transition: 160ms ease-in-out;
+}
+
+.project-tile:first-of-type:hover {
+    transform: rotate(-10deg);
+    transition: 160ms ease-in-out;
+}
+
+.project-tile:nth-of-type(2):hover {
+    transform: scale(1.2);
+    transition: 160ms ease-in-out;
+}
+
+.project-tile:nth-of-type(3):hover {
+    transform: rotate(10deg);
+    transition: 160ms ease-in-out;
+}
+
+#contact {
+    background-color: #fafafa;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+#contact a {
+    background-color: #fafafa;
+    color: black;
+}
+
+@media (max-width: 55rem) {
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #projects,
+    #contact {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    
+    }
+
+    #welcome-section {
+        padding-top: 16rem;
+        padding-bottom: 10rem;
+    }
+}
+/*CUSTOM CSS ENDS HERE*/
