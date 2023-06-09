@@ -2,14 +2,14 @@
   
 Here you can find all the finished lessons from the (new) Responsive Design course by freeCodeCamp, as well as my versions of the course projects.
 
-I officially completed this certification on 7th October 2022. [Here's the certificate](https://www.freecodecamp.org/certification/amparo/responsive-web-design).
+I officially completed this certification on 7th October 2022. [View the certificate](https://www.freecodecamp.org/certification/amparo/responsive-web-design).
 
-## :heavy_check_mark: FINISHED
+## :heavy_check_mark: Finished
   
 - All lessons
 - All projects
 
-## Finished projects
+## Projects
 
 - [Survey Form](https://free-code-camp-responsive-design-course.vercel.app/projects/survey-form/index.html)
 - [Tribute Page](https://free-code-camp-responsive-design-course.vercel.app/projects/tribute-page/index.html)
