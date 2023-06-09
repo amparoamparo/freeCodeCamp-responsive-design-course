@@ -1,4 +1,4 @@
-# freeCodeCamp-responsive-design-course
+# freeCodeCamp's Responsive Design Course
   
 Here you can find all the finished lessons from the (new) Responsive Design course by freeCodeCamp, as well as my versions of the course projects.
 
